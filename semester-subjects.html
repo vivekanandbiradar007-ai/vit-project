@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semester Subjects | VIT Software Training & Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: #2c3e50;
+        }
+
+        .overview {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .subject-list {
+            margin-top: 40px;
+        }
+
+        .subject {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .subject h4 {
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .subject p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .cta a:hover {
+            background: #ee5a24;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Semester Subjects</h1>
+    <p>Comprehensive Training for Your Academic Curriculum & Practical Learning</p>
+</header>
+
+<section>
+    <h2>Overview</h2>
+    <p class="overview">
+        Our <strong>Semester Subject Training</strong> provides students with a deep understanding of their academic syllabus while incorporating practical projects and real-world examples.
+        This approach ensures that students excel both in exams and industry-relevant skills.
+    </p>
+</section>
+
+<section>
+    <h2>Key Features</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-book"></i>
+            <h3>Exam-Focused Learning</h3>
+            <p>Structured sessions to cover the complete semester syllabus efficiently.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Practical Approach</h3>
+            <p>Hands-on coding, lab exercises, and mini-projects to reinforce concepts.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Expert Faculty</h3>
+            <p>Learn from industry professionals with years of teaching and real-world experience.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-tasks"></i>
+            <h3>Assessment & Feedback</h3>
+            <p>Regular quizzes, assignments, and feedback to ensure complete understanding.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Sample Semester Subjects</h2>
+    <div class="subject-list">
+        <div class="subject">
+            <h4>Programming Fundamentals</h4>
+            <p>Introduction to C, C++, Java, and Python basics with problem-solving exercises.</p>
+        </div>
+        <div class="subject">
+            <h4>Data Structures & Algorithms</h4>
+            <p>Learn arrays, linked lists, stacks, queues, trees, sorting, and searching algorithms.</p>
+        </div>
+        <div class="subject">
+            <h4>Database Management</h4>
+            <p>MySQL, SQL queries, normalization, and practical database projects.</p>
+        </div>
+        <div class="subject">
+            <h4>Web Development</h4>
+            <p>HTML, CSS, JavaScript, and modern frameworks like React & Angular.</p>
+        </div>
+        <div class="subject">
+            <h4>Software Engineering & Projects</h4>
+            <p>Real-time mini projects to apply learned concepts and industry standards.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Master Your Semester Subjects with VIT</h2>
+    <p>Get expert guidance, practical experience, and academic excellence.</p>
+    <a href="index.html#contact">Enroll Now</a>
+</section>
+
+<footer>
+    © 2018 VIT Software Training & Development | Semester Subjects Program
+</footer>
+
+</body>
+</html>
