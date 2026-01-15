@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java / Advanced Java | VIT Software Training & Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: #2c3e50;
+        }
+
+        .overview {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .modules {
+            margin-top: 40px;
+        }
+
+        .module {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .module h4 {
+            margin-bottom: 8px;
+            color: #ff6b6b;
+        }
+
+        .module p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #667eea;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .cta a:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Java / Advanced Java</h1>
+    <p>Master Core and Advanced Java Concepts with Hands-On Projects</p>
+</header>
+
+<section>
+    <h2>Course Overview</h2>
+    <p class="overview">
+        Our <strong>Java / Advanced Java Course</strong> is designed for students and professionals who want to build 
+        a strong foundation in Java programming. From core concepts to advanced frameworks, 
+        this course equips learners with practical skills for software development and enterprise applications.
+    </p>
+</section>
+
+<section>
+    <h2>Key Benefits</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Expert Trainers</h3>
+            <p>Learn from industry professionals with years of experience in Java development.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Hands-On Projects</h3>
+            <p>Build real-world applications and get practical exposure to Java frameworks.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-certificate"></i>
+            <h3>Certification</h3>
+            <p>Receive an industry-recognized certificate after successful course completion.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Career Support</h3>
+            <p>Guidance for interviews, resume building, and job placements in Java development roles.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Course Modules</h2>
+    <div class="modules">
+        <div class="module">
+            <h4>Core Java</h4>
+            <p>Variables, Data Types, Operators, Control Statements, OOP Concepts, Exception Handling, Collections, Multithreading.</p>
+        </div>
+        <div class="module">
+            <h4>Advanced Java</h4>
+            <p>JDBC, Servlets, JSP, Hibernate, Spring Framework, Web Services, MVC Architecture, REST APIs.</p>
+        </div>
+        <div class="module">
+            <h4>Projects</h4>
+            <p>Build practical projects like E-commerce Website, Online Banking System, and Student Management System using Java and related frameworks.</p>
+        </div>
+        <div class="module">
+            <h4>Tools & IDEs</h4>
+            <p>IntelliJ IDEA, Eclipse, Maven, Git, MySQL, Tomcat Server.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Your Java Journey Today</h2>
+    <p>Enroll in our Java / Advanced Java Course and become an industry-ready developer.</p>
+    <a href="index.html#contact">Enroll Now</a>
+</section>
+
+<footer>
+    © 2018 VIT Software Training & Development | Java / Advanced Java Course
+</footer>
+
+</body>
+</html>
