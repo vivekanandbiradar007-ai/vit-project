@@ -4,390 +4,620 @@
     <meta charset="UTF-8">
     <title>VIT Software Training & Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 		
         body {
             line-height: 1.6;
             color: #333;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
 
+        /* Hero Section */
         header {
-            background: linear-gradient(120deg, #1a73e8, #0d47a1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #fff;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        header .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            background: #ffca28;
-            color: #000;
-            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: #fff;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
         }
 
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(238, 90, 36, 0.4);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Navigation */
         nav {
-            background: #0d47a1;
-            padding: 10px;
+            background: rgba(13, 71, 161, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
         nav a {
             color: #fff;
-            margin: 0 12px;
+            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+            position: relative;
         }
 
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
         section {
-            padding: 60px 20px;
-            max-width: 1100px;
+            padding: 80px 20px;
+            max-width: 1200px;
             margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        section:nth-child(even) {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            max-width: 100%;
         }
 
         section h2 {
             text-align: center;
-            margin-bottom: 40px;
-            color: #0d47a1;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
         }
 
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .card h3 {
-            margin-bottom: 10px;
-            color: #1a73e8;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .card p {
-            font-size: 0.95rem;
+            font-size: 1rem;
+            color: #7f8c8d;
+            line-height: 1.6;
         }
 
+        /* Course List */
         .courses ul {
             list-style: none;
         }
 
         .courses li {
-            background: #e3f2fd;
-            margin: 8px 0;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        .contact {
-            background: #f1f5fb;
-        }
-
-        form {
-            max-width: 500px;
-            margin: auto;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            width: 100%;
-            padding: 12px;
-            background: #1a73e8;
-            color: #fff;
-            border: none;
-            font-size: 1rem;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 12px 0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
-        footer {
-            background: #0d47a1;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
+        .courses li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-		.contact {
-    background: linear-gradient(135deg, #f1f5fb, #e3f2fd);
-}
 
-.contact h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #0d47a1;
-}
+        .courses li::before {
+            content: '▶';
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
 
-.contact-wrapper {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    background: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+        /* Founders Section */
+        .founder img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
 
-.contact-info h3 {
-    margin-bottom: 10px;
-    color: #1a73e8;
-}
+        .founder:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
 
-.contact-info p {
-    margin-bottom: 12px;
-    font-size: 1rem;
-}
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 0.95rem;
-}
+        .contact h2 {
+            color: white;
+        }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #1a73e8;
-}
+        .contact-wrapper {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
 
-.contact-form button {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(120deg, #1a73e8, #0d47a1);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
 
-.contact-form button:hover {
-    transform: translateY(-2px);
-}
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        padding: 25px;
-    }
-}
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
 
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(238, 90, 36, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading animation */
+        .loading-dots {
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>VIT Software Training & Development</h1>
-    <p>Industry-Ready IT Training | Real-Time Projects | Career Guidance</p>
-    <a href="#contact" class="btn">Enroll Now</a>
+    <div class="hero-content">
+        <h1>VIT Software Training & Development</h1>
+        <p>🚀 Industry-Ready IT Training | 💼 Real-Time Projects | 🎯 Career Guidance</p>
+        <a href="#contact" class="btn">🎓 Enroll Now</a>
+    </div>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-    <a href="#courses">Courses</a>
-    <a href="#process">Training Process</a>
-    <a href="#contact">Contact</a>
-	<a href="https://skillup.vivekit.in/login">Login</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#features"><i class="fas fa-star"></i> Features</a>
+    <a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a>
+    <a href="#process"><i class="fas fa-cogs"></i> Process</a>
+    <a href="#founders"><i class="fas fa-users"></i> Founders</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="https://skillup.vivekit.in/login"><i class="fas fa-sign-in-alt"></i> Login</a>
 </nav>
 
-<section id="about">
+<section id="about" class="animate-on-scroll">
     <h2>About Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        VIT Software Training & Development provides professional software training
+    <p style="text-align:center; max-width:800px; margin:auto; font-size:1.2rem; color:#7f8c8d;">
+        🎯 VIT Software Training & Development provides professional software training
         designed to make students and professionals job-ready. We focus on practical
         learning, live projects, and real-world industry requirements.
     </p>
 </section>
 
-<section id="features">
+<section id="features" class="animate-on-scroll">
     <h2>Training Features</h2>
     <div class="grid">
         <div class="card">
+            <i class="fas fa-chalkboard-teacher"></i>
             <h3>Expert Trainers</h3>
-            <p>Learn from industry professionals with real-time experience.</p>
+            <p>Learn from industry professionals with real-time experience and proven track records.</p>
         </div>
         <div class="card">
+            <i class="fas fa-project-diagram"></i>
             <h3>Live Projects</h3>
-            <p>Hands-on training with real-world project implementation.</p>
+            <p>Hands-on training with real-world project implementation and industry exposure.</p>
         </div>
         <div class="card">
+            <i class="fas fa-briefcase"></i>
             <h3>Internship Program</h3>
             <p>Internship opportunities with real project exposure and experience letters.</p>
         </div>
         <div class="card">
+            <i class="fas fa-handshake"></i>
             <h3>Placement Support</h3>
-            <p>Resume preparation, mock interviews & career guidance.</p>
+            <p>Resume preparation, mock interviews & comprehensive career guidance.</p>
         </div>
         <div class="card">
+            <i class="fas fa-certificate"></i>
             <h3>Certification</h3>
-            <p>Industry-recognized course completion certificates.</p>
+            <p>Industry-recognized course completion certificates to boost your career.</p>
         </div>
         <div class="card">
+            <i class="fas fa-dollar-sign"></i>
             <h3>Affordable Fees</h3>
-            <p>High-quality training at competitive pricing.</p>
+            <p>High-quality training at competitive pricing with flexible payment options.</p>
         </div>
     </div>
 </section>
 
-<section id="courses" class="courses">
+<section id="courses" class="courses animate-on-scroll">
     <h2>Our Courses</h2>
     <div class="grid">
         <div class="card">
+            <i class="fas fa-code"></i>
             <h3>Software Development</h3>
             <ul>
                 <li>Java / Advanced Java</li>
-                <li>Python</li>
-                <li>C & C++</li>
+                <li>Python Programming</li>
+                <li>C & C++ Fundamentals</li>
             </ul>
         </div>
         <div class="card">
+            <i class="fas fa-globe"></i>
             <h3>Web Development</h3>
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React / Angular</li>
-                <li>PHP & Node.js</li>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>React / Angular Frameworks</li>
+                <li>PHP & Node.js Backend</li>
             </ul>
         </div>
         <div class="card">
+            <i class="fas fa-cloud"></i>
             <h3>Data & Cloud</h3>
             <ul>
-                <li>Data Science</li>
-                <li>Machine Learning</li>
-                <li>AWS / Azure</li>
+                <li>Data Science & Analytics</li>
+                <li>Machine Learning & AI</li>
+                <li>AWS / Azure Cloud Computing</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section id="process">
+<section id="process" class="animate-on-scroll">
     <h2>Our Training Process</h2>
     <div class="grid">
         <div class="card">
+            <i class="fas fa-search"></i>
             <h3>1. Assessment</h3>
-            <p>Evaluate student skill level and career goals.</p>
+            <p>Comprehensive evaluation of student skill level and career goals.</p>
         </div>
         <div class="card">
+            <i class="fas fa-book-open"></i>
             <h3>2. Training</h3>
-            <p>Concepts explained with hands-on practical sessions.</p>
+            <p>Interactive concepts explanation with hands-on practical sessions.</p>
         </div>
         <div class="card">
+            <i class="fas fa-tools"></i>
             <h3>3. Projects</h3>
-            <p>Work on live projects and case studies.</p>
+            <p>Real-world project development and comprehensive case studies.</p>
         </div>
         <div class="card">
+            <i class="fas fa-rocket"></i>
             <h3>4. Placement Support</h3>
-            <p>Interview prep, mock tests & job assistance.</p>
+            <p>Professional interview prep, mock tests & dedicated job assistance.</p>
         </div>
     </div>
 </section>
 
-<!-- FOUNDERS SECTION -->
-<section id="founders">
-    <h2>Our Founders</h2>
+<section id="founders" class="animate-on-scroll">
+    <h2>Meet Our Founders</h2>
     <div class="grid">
         <div class="card founder">
-            <img src="https://via.placeholder.com/150" alt="Founder 1">
+            <img src="https://via.placeholder.com/150/667eea/ffffff?text=VB" alt="Vivekanand B Biradar">
             <h3>Vivekanand B Biradar</h3>
-            <p>Founder and Chairman</p>
-            <p>15+ years of experience in software development and IT training.</p>
+            <p><strong>Founder and Chairman</strong></p>
+            <p>🏆 15+ years of experience in software development and IT training excellence.</p>
         </div>
 
         <div class="card founder">
-            <img src="https://via.placeholder.com/150" alt="Founder 2">
+            <img src="https://via.placeholder.com/150/764ba2/ffffff?text=SK" alt="Satya Katepalli">
             <h3>Satya Katepalli</h3>
-            <p>CEO</p>
-            <p>Expert in Algorithms and Data Structure.</p>
+            <p><strong>CEO</strong></p>
+            <p>💡 Expert in Algorithms, Data Structures, and innovative teaching methodologies.</p>
         </div>
-		
     </div>
 </section>
 
+<section id="contact" class="contact animate-on-scroll">
+    <h2>Get In Touch</h2>
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>🤝 Let's Connect</h3>
+            <p>Ready to transform your career? We'd love to help you choose the perfect course for your goals.</p>
+            <p>📧 <strong>Email:</strong> **info@vivekit.in**</p>
+            <p>🕒 <strong>Response Time:</strong> Within 24 hours</p>
+            <p>💼 <strong>Free Consultation:</strong> Available</p>
+        </div>
 
-<!-- CONTACT SECTION -->
-	<section id="contact" class="contact">
-		<h2>Contact Us</h2>
+        <form action="https://formsubmit.co/info@vivekit.in" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="🎓 New Enquiry from VIT Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
-		<div class="contact-wrapper">
+            <input type="text" name="Name" placeholder="👤 Your Full Name" required>
+            <input type="email" name="Email" placeholder="📧 Your Email Address" required>
+            <input type="text" name="Course" placeholder="🎯 Course You're Interested In">
+            <textarea name="Message" rows="4" placeholder="💬 Tell us about your goals and questions..."></textarea>
 
-			<div class="contact-info">
-				<h3>Get in Touch</h3>
-				<p>We’d love to help you choose the right course.</p>
-				<p>📧 <strong>Email:</strong> info@vivekit.in</p>
-			</div>
-
-			<form action="https://formsubmit.co/info@vivekit.in" method="POST" class="contact-form">
-
-				<input type="hidden" name="_subject" value="New Enquiry from Website">
-				<input type="hidden" name="_captcha" value="false">
-				<input type="hidden" name="_template" value="table">
-
-				<input type="text" name="Name" placeholder="Your Name" required>
-				<input type="email" name="Email" placeholder="Your Email" required>
-				<input type="text" name="Course" placeholder="Course Interested In">
-				<textarea name="Message" rows="4" placeholder="Your Message"></textarea>
-
-				<button type="submit">Send Message</button>
-			</form>
-
-		</div>
-	</section>
-
-
+            <button type="submit">🚀 Send Message</button>
+        </form>
+    </div>
+</section>
 
 <footer>
-    © 2018 VIT Software Training & Development. All Rights Reserved.
+    <p>© 2018 VIT Software Training & Development. All Rights Reserved. | Made with ❤️ for Future Developers</p>
 </footer>
+
+<script>
+    // Smooth scroll animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Add smooth hover effects
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) rotateX(5deg)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) rotateX(0)';
+        });
+    });
+</script>
 
 </body>
 </html>
-
-
-
-
-
