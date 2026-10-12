@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML from fundamentals to advanced concepts with practical projects at VivekIT Software Training & Development.">
+    <title>HTML Course | VivekIT Software Training & Development</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e44d26, #f16529);
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 15px;
+            border-radius: 30px;
+            margin-top: 18px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin: 0 0 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            color: #e44d26;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .topic {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            border-top: 4px solid #f16529;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .topic h3 {
+            color: #d84315;
+            font-size: 1.05rem;
+            margin-top: 0;
+        }
+
+        .topic ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            background: linear-gradient(135deg, #e44d26, #f16529);
+            color: white;
+            padding: 12px 18px;
+            margin: 10px 0;
+            border-radius: 9px;
+        }
+
+        .code-example {
+            background: #202b3c;
+            color: #f5f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+
+        .outcome {
+            background: #fff4ef;
+            border-left: 4px solid #f16529;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #e44d26, #f16529);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #263746;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .btn:hover {
+            background: #17232e;
+        }
+
+        footer {
+            background: #263746;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffad8e;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 15px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">VivekIT Software Training & Development</div>
+    <h1>HTML – HyperText Markup Language</h1>
+    <p>Structure the Web | Build Websites | Create Digital Experiences</p>
+    <span class="badge">Beginner to Practical Web Development</span>
+</header>
+
+<main>
+
+    <section>
+        <div class="card">
+            <h2>Course Overview</h2>
+            <p>
+                The HTML course at VivekIT Software Training & Development introduces
+                students to the fundamental language used to structure web pages.
+                Students learn how to create headings, paragraphs, links, images,
+                lists, tables, forms and semantic page layouts.
+            </p>
+            <p>
+                Through hands-on practice and mini-projects, learners build a strong
+                foundation for CSS, JavaScript and full-stack web development.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Course Objectives</h2>
+            <ul>
+                <li>Understand the structure and purpose of HTML documents.</li>
+                <li>Use HTML elements and attributes correctly.</li>
+                <li>Create structured web pages with text, images and hyperlinks.</li>
+                <li>Design tables and forms for collecting user information.</li>
+                <li>Build accessible and semantic website layouts.</li>
+                <li>Prepare for CSS, JavaScript and frontend development.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Detailed HTML Syllabus</h2>
+
+        <div class="grid">
+
+            <div class="topic">
+                <h3>Module 1: Introduction to HTML</h3>
+                <ul>
+                    <li>Introduction to the World Wide Web</li>
+                    <li>What is HTML?</li>
+                    <li>HTML versions and HTML5 overview</li>
+                    <li>Tags, elements and attributes</li>
+                    <li>HTML document structure</li>
+                    <li>DOCTYPE, html, head and body</li>
+                    <li>Creating and running an HTML file</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 2: Text Formatting</h3>
+                <ul>
+                    <li>Heading elements: h1 to h6</li>
+                    <li>Paragraphs and line breaks</li>
+                    <li>Horizontal rules</li>
+                    <li>Bold and emphasized text</li>
+                    <li>Strong and importance elements</li>
+                    <li>Subscript and superscript</li>
+                    <li>Comments and special characters</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 3: Links and Images</h3>
+                <ul>
+                    <li>Anchor element and hyperlinks</li>
+                    <li>Absolute and relative URLs</li>
+                    <li>Opening links in a new tab</li>
+                    <li>Internal page navigation</li>
+                    <li>Image element and attributes</li>
+                    <li>Alternative text for images</li>
+                    <li>Clickable email and telephone links</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 4: Lists</h3>
+                <ul>
+                    <li>Ordered lists</li>
+                    <li>Unordered lists</li>
+                    <li>Description lists</li>
+                    <li>Nested lists</li>
+                    <li>List attributes</li>
+                    <li>Creating menus using lists</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 5: Tables</h3>
+                <ul>
+                    <li>Creating HTML tables</li>
+                    <li>Table rows and data cells</li>
+                    <li>Table headings and captions</li>
+                    <li>thead, tbody and tfoot</li>
+                    <li>Rowspan and colspan</li>
+                    <li>Accessible table structure</li>
+                    <li>Student marksheet mini-project</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 6: HTML Forms</h3>
+                <ul>
+                    <li>Form, action and method</li>
+                    <li>Input types and attributes</li>
+                    <li>Labels and placeholders</li>
+                    <li>Radio buttons and checkboxes</li>
+                    <li>Select, option and textarea</li>
+                    <li>Buttons and file uploads</li>
+                    <li>Required fields and basic validation</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 7: Semantic HTML</h3>
+                <ul>
+                    <li>Semantic versus non-semantic elements</li>
+                    <li>header and footer</li>
+                    <li>nav and main</li>
+                    <li>section and article</li>
+                    <li>aside and figure</li>
+                    <li>Improving readability and accessibility</li>
+                    <li>SEO-friendly document structure</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 8: Multimedia</h3>
+                <ul>
+                    <li>Audio element</li>
+                    <li>Video element</li>
+                    <li>Source and track elements</li>
+                    <li>Embedding external content with iframe</li>
+                    <li>Adding maps and video embeds</li>
+                    <li>Media accessibility basics</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 9: Advanced HTML Concepts</h3>
+                <ul>
+                    <li>Meta tags and character encoding</li>
+                    <li>Viewport and responsive pages</li>
+                    <li>HTML entities</li>
+                    <li>Data attributes</li>
+                    <li>Details and summary elements</li>
+                    <li>Accessibility and ARIA basics</li>
+                    <li>HTML validation and debugging</li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <h3>Module 10: Practical Website Building</h3>
+                <ul>
+                    <li>Building a personal profile page</li>
+                    <li>Creating a college information page</li>
+                    <li>Developing a registration form</li>
+                    <li>Creating a timetable and marksheet</li>
+                    <li>Building a multi-page website</li>
+                    <li>Introduction to CSS integration</li>
+                    <li>Publishing a static website</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>Sample HTML Program</h2>
+            <p>This example demonstrates the basic structure of an HTML document.</p>
+
+            <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to VivekIT&lt;/h1&gt;
+    &lt;p&gt;I am learning HTML.&lt;/p&gt;
+    &lt;a href="https://vivekit.in"&gt;Visit VivekIT&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>Hands-on Practice Programs</h2>
+            <ul class="highlight-list">
+                <li>Create a webpage with all six heading levels.</li>
+                <li>Build a student profile using text formatting and images.</li>
+                <li>Create a nested list of courses and subjects.</li>
+                <li>Design a student marksheet using HTML tables.</li>
+                <li>Build a student registration form with validation.</li>
+                <li>Create a college timetable using rowspan and colspan.</li>
+                <li>Embed an audio clip and a video in a webpage.</li>
+                <li>Develop a multi-page college website using semantic HTML.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h2>Who Should Join?</h2>
+            <ul>
+                <li>School and college students</li>
+                <li>BCA, MCA and engineering students</li>
+                <li>Beginners interested in website development</li>
+                <li>Students preparing for internships and placements</li>
+                <li>Learners planning to study CSS, JavaScript and full-stack development</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Course Outcomes</h2>
+
+            <div class="outcome">
+                <strong>CO1:</strong> Explain the structure of HTML documents and
+                use appropriate elements and attributes.
+            </div>
+
+            <div class="outcome">
+                <strong>CO2:</strong> Create web pages containing formatted text,
+                hyperlinks, images and lists.
+            </div>
+
+            <div class="outcome">
+                <strong>CO3:</strong> Design tables and forms for displaying data
+                and collecting user input.
+            </div>
+
+            <div class="outcome">
+                <strong>CO4:</strong> Organize content using semantic HTML elements
+                and basic accessibility practices.
+            </div>
+
+            <div class="outcome">
+                <strong>CO5:</strong> Integrate multimedia and essential metadata
+                into web pages.
+            </div>
+
+            <div class="outcome">
+                <strong>CO6:</strong> Develop and test a basic multi-page website
+                and prepare for CSS and JavaScript learning.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Assessment & Evaluation</h2>
+            <ul>
+                <li>Topic-wise practical assignments</li>
+                <li>HTML coding exercises and debugging tasks</li>
+                <li>Weekly assessments and quizzes</li>
+                <li>Individual mini-project evaluation</li>
+                <li>Final website development project</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="cta">
+            <h2>Learn HTML. Build Your First Website.</h2>
+            <p>
+                Start your web development journey with VivekIT Software Training
+                & Development.
+            </p>
+            <p>
+                <strong>Phone:</strong> 9880022293<br>
+                <strong>Email:</strong> info@vivekit.in
+            </p>
+            <a class="btn" href="https://vivekit.in">Visit VivekIT</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 VivekIT Software Training & Development</p>
+    <p>Learn | Build | Practice | Grow | Get Placed</p>
+    <p><a href="https://vivekit.in">https://vivekit.in</a></p>
+</footer>
+
+</body>
+</html>
