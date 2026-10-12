@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Course Syllabus | VivekIT</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 18px;
+            font-size: 1.65rem;
+        }
+
+        h3 {
+            color: #11998e;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        ul li {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            padding: 12px 18px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .module {
+            background: #f0fbf7;
+            border-left: 5px solid #11998e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .module h3 {
+            font-size: 1.05rem;
+        }
+
+        .module p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #11998e, #25c77a);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: white;
+        }
+
+        .example {
+            background: #f4f6f9;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+
+        pre {
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.7;
+            white-space: pre;
+        }
+
+        .outcomes {
+            background: #f0fbf7;
+            border-left: 5px solid #11998e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ee5253;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #38ef7d;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS – Cascading Style Sheets</h1>
+    <p>Learn to Design Beautiful, Responsive and Professional Websites</p>
+    <p><strong>VivekIT Software Training & Development</strong></p>
+</header>
+
+<main class="container">
+
+    <!-- Course Overview -->
+    <section class="card">
+        <h2>📘 Course Overview</h2>
+        <p>
+            CSS (Cascading Style Sheets) is used to style HTML webpages.
+            It controls colours, fonts, spacing, layouts, animations and
+            responsive designs.
+        </p>
+        <p>
+            This course helps students build attractive, user-friendly and
+            mobile-responsive websites through practical exercises and projects.
+        </p>
+
+        <div class="grid">
+            <div class="module">
+                <h3>Course</h3>
+                <p>CSS Fundamentals to Advanced CSS</p>
+            </div>
+            <div class="module">
+                <h3>Learning Mode</h3>
+                <p>Theory, coding practice and projects</p>
+            </div>
+            <div class="module">
+                <h3>Prerequisite</h3>
+                <p>Basic knowledge of HTML recommended</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Objectives -->
+    <section class="card">
+        <h2>🎯 Course Objectives</h2>
+        <ul>
+            <li>Understand CSS syntax and styling methods.</li>
+            <li>Apply colours, fonts, borders, spacing and backgrounds.</li>
+            <li>Design layouts using Flexbox and CSS Grid.</li>
+            <li>Create responsive webpages for mobile and desktop devices.</li>
+            <li>Implement transitions, animations and visual effects.</li>
+            <li>Develop complete website interfaces through practical projects.</li>
+        </ul>
+    </section>
+
+    <!-- Syllabus -->
+    <section class="card">
+        <h2>📚 Detailed Course Syllabus</h2>
+
+        <div class="grid">
+
+            <div class="module">
+                <h3>Module 1: Introduction to CSS</h3>
+                <p>
+                    What is CSS, advantages of CSS, CSS syntax, selectors,
+                    declarations and CSS comments.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 2: Applying CSS</h3>
+                <p>
+                    Inline CSS, internal CSS, external CSS, linking stylesheets,
+                    cascading rules and inheritance.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 3: Selectors</h3>
+                <p>
+                    Element, class, ID, universal, grouping, attribute,
+                    descendant, child and pseudo-class selectors.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 4: Colours and Typography</h3>
+                <p>
+                    Colour names, HEX, RGB, RGBA, HSL, font families,
+                    font sizes, text alignment and text decoration.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 5: CSS Box Model</h3>
+                <p>
+                    Content, padding, border, margin, width, height,
+                    box-sizing and element spacing.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 6: Display and Positioning</h3>
+                <p>
+                    Block, inline, inline-block, none, static, relative,
+                    absolute, fixed, sticky and z-index.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 7: Flexbox</h3>
+                <p>
+                    Flex containers, flex items, direction, alignment,
+                    justify-content, gap, wrapping and responsive layouts.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 8: CSS Grid</h3>
+                <p>
+                    Grid containers, rows, columns, gaps, grid templates,
+                    item placement and two-dimensional layouts.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 9: Backgrounds and Borders</h3>
+                <p>
+                    Background colours, images, gradients, border styles,
+                    border radius, shadows and opacity.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 10: Responsive Web Design</h3>
+                <p>
+                    Media queries, breakpoints, flexible layouts,
+                    responsive units and mobile-first design.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 11: Transitions and Animations</h3>
+                <p>
+                    CSS transitions, transforms, keyframes, animations,
+                    hover effects and interactive elements.
+                </p>
+            </div>
+
+            <div class="module">
+                <h3>Module 12: Advanced CSS</h3>
+                <p>
+                    CSS variables, pseudo-elements, attribute selectors,
+                    specificity, reusable styles and maintainable CSS.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Practical Example -->
+    <section class="card">
+        <h2>💻 Practical Example</h2>
+        <p>Use the following CSS to style an HTML heading and paragraph.</p>
+
+        <div class="example">
+<pre>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+h1 {
+    color: #11998e;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+}</pre>
+        </div>
+
+        <div class="highlight">
+            <h3>Hands-on Practice</h3>
+            <p>
+                Write CSS rules, save the stylesheet and connect it to an HTML
+                file. Experiment with colours, fonts, margins and layouts.
+            </p>
+        </div>
+    </section>
+
+    <!-- Practical Projects -->
+    <section class="card">
+        <h2>🚀 Practical Projects</h2>
+        <ul>
+            <li>Personal portfolio webpage</li>
+            <li>Responsive navigation bar</li>
+            <li>Login and registration form design</li>
+            <li>Responsive card-based layout</li>
+            <li>College or training institute homepage</li>
+            <li>Responsive landing page using Flexbox and Grid</li>
+        </ul>
+    </section>
+
+    <!-- Learning Outcomes -->
+    <section class="card">
+        <h2>🏆 Course Outcomes</h2>
+        <div class="outcomes">
+            <p>After completing this course, students will be able to:</p>
+            <ul>
+                <li>Write and organize CSS stylesheets.</li>
+                <li>Style HTML elements using appropriate selectors.</li>
+                <li>Build layouts using Flexbox and Grid.</li>
+                <li>Create responsive pages using media queries.</li>
+                <li>Apply CSS animations and visual effects.</li>
+                <li>Develop polished website interfaces independently.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Assessment -->
+    <section class="card">
+        <h2>📝 Assessment and Practice</h2>
+        <ul>
+            <li>CSS syntax and selector exercises</li>
+            <li>Box model and positioning assignments</li>
+            <li>Flexbox and Grid layout challenges</li>
+            <li>Responsive design coding exercises</li>
+            <li>Mini-project and final webpage development</li>
+        </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Start Your Web Design Journey!</h2>
+        <p>
+            Learn CSS with practical coding exercises and project-based training.
+        </p>
+        <a href="https://vivekit.in" class="btn">Explore VivekIT</a>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>VivekIT Software Training & Development</strong></p>
+    <p>Phone: 9880022293</p>
+    <p>Email: <a href="mailto:info@vivekit.in">info@vivekit.in</a></p>
+    <p>Website: <a href="https://vivekit.in">www.vivekit.in</a></p>
+    <p>&copy; 2026 VivekIT. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
